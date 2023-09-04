@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,9 @@ Route::get('/welcome', function () {
 Route::get('/form', function () {
     return view('form');
 })-> name('form');
+
+Route::get('/master', [MasterController::class, 'master'])->name('master');
+Route::get('/', [MasterController::class, 'content'])->name('index');
+Route::get('/anggota', [MasterController::class, 'anggota'])->name('anggota');
+Route::get('/buku', [MasterController::class, 'buku'])->name('buku');
+Route::get('/petugas', [MasterController::class, 'petugas'])->name('petugas');
