@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buku;
+use App\Models\Anggota;
+use App\Models\Petugas;
 use Illuminate\Http\Request;
 
 class MasterController extends Controller
@@ -10,7 +12,9 @@ class MasterController extends Controller
 
     public function content(){
         $buku = Buku::all();
-        return view('content',compact(['buku']));
+        $anggota = Anggota::all();
+        $petugas = Petugas::all();
+        return view('content',compact(['buku','anggota','petugas']));
         //dd($buku);
     }
 
@@ -18,15 +22,4 @@ class MasterController extends Controller
         return view('template.master');
     }
 
-    public function anggota(){
-        return view('anggota');
-    }
-
-    public function buku(){
-        return view('buku');
-    }
-
-    public function petugas(){
-        return view('petugas');
-    }
 }
