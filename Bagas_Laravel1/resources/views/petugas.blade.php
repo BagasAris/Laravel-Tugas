@@ -20,10 +20,6 @@
               <!-- form start -->
               <form>
                 <div class="card-body">
-                <div class="form-group">
-                    <label for="exampleInputNo1">No</label>
-                    <input type="No" class="form-control" id="exampleInputNo1" placeholder="Enter No">
-                  </div>
                   <div class="form-group">
                     <label for="exampleInputNama1">Nama</label>
                     <input type="nama" class="form-control" id="exampleInputNama1" placeholder="Enter Nama">

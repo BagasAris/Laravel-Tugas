@@ -22,32 +22,22 @@
               <form>
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputNo1">No</label>
-                    <input type="No" class="form-control" id="exampleInputNo1" placeholder="Enter No">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputKodeAnggota1">Kode Anggota</label>
-                    <input type="KodeAnggota" class="form-control" id="exampleInputKodeAnggota1" placeholder="Enter Kode Anggota">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputNama1">Nama</label>
-                    <input type="nama" class="form-control" id="exampleInputNama1" placeholder="Enter Nama">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputJenisKelamin1">Jenis Kelamin</label>
-                    <input type="JenisKelamin" class="form-control" id="exampleInputJenisKelamin1" placeholder="Enter Jenis Kelamin">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputJurusan1">Jurusan</label>
-                    <input type="jurusan" class="form-control" id="exampleInputJurusan1" placeholder="Enter Jurusan">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputNoTelepon1">No Telepon</label>
-                    <input type="NoTelepon" class="form-control" id="exampleInputNoTelepon1" placeholder="Enter No Telepon">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputAlamat1">Alamat</label>
-                    <input type="alamat" class="form-control" id="exampleInputAlamat1" placeholder="Enter Alamat">
+                    <label for="exampleInputEmail1">Kode Anggota</label>
+                    <input type="text" class="form-control" name="kode_anggota" placeholder="Input Kode Anggota">
+                    <label for="exampleInputEmail1">Nama Anggota</label>
+                    <input type="text" class="form-control" name="nama_anggota" placeholder="Input Nama Anggota">
+                        <label>Jenis Kelamin</label>
+                        <select type="text" name="jk_anggota" class="form-control">
+                          <option disabled selectdes>Jenis Kelamin</option>
+                          <option value="L">Laki-Laki</option>
+                          <option value="P">Perempuan</option>
+                        </select>
+                    <label for="exampleInputEmail1">Jurusan anggota</label>
+                    <input type="text" class="form-control" name="jurusan_anggota" placeholder="Input Jurusan Anggota">
+                    <label for="exampleInputEmail1">No Telepon</label>
+                    <input type="number" class="form-control" name="no_telp_anggota" placeholder="Input No Telp Anggota">
+                    <label for="exampleInputEmail1">Alamat Anggota</label>
+                    <input type="text" class="form-control" name="alamat_anggota" placeholder="Input Alamat Anggota">
                   </div>
                 <!-- /.card-body -->
 

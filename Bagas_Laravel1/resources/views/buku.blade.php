@@ -21,10 +21,6 @@
               <form>
                 <div class="card-body">
                   <div class="form-group">
-                  <label for="exampleInputIdBuku1">Id Buku</label>
-                    <input type="IdBuku" class="form-control" id="exampleInputIdBuku1" placeholder="Enter Id Buku">
-                  </div>
-                  <div class="form-group">
                     <label for="exampleInputKodeBuku1">Kode Buku</label>
                     <input type="KodeBuku" class="form-control" id="exampleInputKodeBuku1" placeholder="Enter Kode Buku">
                   </div>
