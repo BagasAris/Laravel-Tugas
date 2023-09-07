@@ -31,9 +31,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/master', [MasterController::class, 'master'])->name('master');
 Route::get('/', [MasterController::class, 'content'])->name('index');
-Route::get('/anggota', [AnggotaController::class, 'anggota'])->name('anggota');
-Route::get('/buku', [BukuController::class, 'buku'])->name('buku');
-Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
+Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
+Route::get('/buku', [BukuController::class, 'create'])->name('buku');
+Route::get('/petugas', [PetugasController::class, 'create'])->name('petugas');
 // Route::post('/buku/store', [BukuController::class, 'storeb']);
 // Route::post('/anggota/store', [AnggotaController::class, 'storea']);
 // Route::post('/petugas/store', [PetugasController::class, 'storep']);
