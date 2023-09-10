@@ -34,6 +34,3 @@ Route::get('/', [MasterController::class, 'content'])->name('index');
 Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
 Route::get('/buku', [BukuController::class, 'create'])->name('buku');
 Route::get('/petugas', [PetugasController::class, 'create'])->name('petugas');
-// Route::post('/buku/store', [BukuController::class, 'storeb']);
-// Route::post('/anggota/store', [AnggotaController::class, 'storea']);
-// Route::post('/petugas/store', [PetugasController::class, 'storep']);
