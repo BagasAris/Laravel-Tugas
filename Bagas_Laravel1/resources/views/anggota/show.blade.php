@@ -3,16 +3,16 @@
 @section('content')
 
 <div class="content-wrapper">
-<div class="card card-success">
+<div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Form Input Data Anggota</h3>
+                <h3 class="card-title">Form Detail Data Anggota</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form action="{{ route('anggota.store') }}" method="POST">
                 @csrf
               <div class="card-body">
-              <div class="card card-success">
+              <div class="card card-info">
               <div class="card-header">
                 <h3 class="card-title">Data Anggota</h3>
               </div>
@@ -22,17 +22,17 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Kode Anggota</label>
-                    <input type="text" class="form-control" name="kode" placeholder="Input Kode Anggota">
+                    <input type="text" class="form-control" name="kode" value="{{ $anggotas[0]->kode_anggota }}" disabled>
                     <label for="exampleInputEmail1">Nama Anggota</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Input Nama Anggota">
+                    <input type="text" class="form-control" name="nama" value="{{ $anggotas[0]->nama_anggota }}" disabled>
                         <label>Jenis Kelamin</label>
-                        <select type="text" name="jk" class="form-control">
+                        <select type="text" name="jk" class="form-control" value="{{ $anggotas[0]->jk_anggota }}" disabled>
                           <option disabled selectdes>Jenis Kelamin</option>
                           <option value="L">Laki-Laki</option>
                           <option value="P">Perempuan</option>
                         </select>
                         <label>Jurusan</label>
-                        <select type="text" name="jurusan" class="form-control">
+                        <select type="text" name="jurusan" class="form-control" value="{{ $anggotas[0]->jurusan_anggota }}" disabled>
                           <option disabled selectdes>Jurusan</option>
                           <option value="rpl">RPL</option>
                           <option value="tkj">TKJ</option>
@@ -47,15 +47,14 @@
                           <option value="tpl">TPL</option>
                         </select>
                     <label for="exampleInputEmail1">No Telepon</label>
-                    <input type="number" class="form-control" name="telp" placeholder="Input No Telp Anggota">
+                    <input type="number" class="form-control" name="telp" value="{{ $anggotas[0]->no_telp_anggota }}" disabled>
                     <label for="exampleInputEmail1">Alamat Anggota</label>
-                    <input type="text" class="form-control" name="alamat" placeholder="Input Alamat Anggota">
+                    <input type="text" class="form-control" name="alamat" value="{{ $anggotas[0]->alamat_anggota }}" disabled>
                   </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-success">Submit</button>
-                  <a href="{{ route('anggota.index') }}" class="btn btn-success">Kembali</a>
+                  <a href="{{ route('anggota.index') }}" class="btn btn-info">Kembali</a>
                 </div>
               </form>
             </div>
