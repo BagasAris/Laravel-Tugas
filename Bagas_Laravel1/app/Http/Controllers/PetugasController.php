@@ -34,7 +34,7 @@ class PetugasController extends Controller
         'nama' => 'required',
         'jabatan' => 'required',
         'telp' => 'required|numeric|min:10',
-        'alamat' => 'required',
+        'alamat' => 'required|min:10',
     ]);
 
     $query = DB::table('petugass')->insert([
@@ -77,7 +77,7 @@ class PetugasController extends Controller
             'nama' => 'required',
             'jabatan' => 'required',
             'telp' => 'required|numeric|min:10',
-            'alamat' => 'required',
+            'alamat' => 'required|min:10',
         ]);
 
         $query = DB::table('petugass')->where('id', $id)->update([

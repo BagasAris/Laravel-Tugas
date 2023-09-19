@@ -54,10 +54,27 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <a href="{{ route('anggota.index') }}" class="btn btn-info">Kembali</a>
+                <a href="" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>
+            </div>
+
+            <div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Peringatan</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah Anda Yakin Akan Keluar Dari Form Detail Data Anggota</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <a href="{{ route('anggota.index') }}" class="btn btn-primary">Yes</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
 <!-- jQuery -->

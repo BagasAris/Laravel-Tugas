@@ -42,17 +42,11 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+          </li>
               <li class="nav-item">
                 <a href="{{ asset('anggota')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anggota</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ asset('buku')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buku</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -61,9 +55,13 @@
                   <p>Petugas</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ asset('buku')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buku</p>
+                </a>
+              </li>
             </ul>
-          </li>
-        </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

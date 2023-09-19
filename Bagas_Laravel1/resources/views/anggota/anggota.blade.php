@@ -34,17 +34,17 @@
                         <label>Jurusan</label>
                         <select type="text" name="jurusan" class="form-control">
                           <option disabled selectdes>Jurusan</option>
-                          <option value="rpl">RPL</option>
-                          <option value="tkj">TKJ</option>
-                          <option value="dpib">DPIB</option>
-                          <option value="dgm">DGM</option>
-                          <option value="tm">TM</option>
-                          <option value="tkro">TKRO</option>
-                          <option value="tbsm">TBSM</option>
-                          <option value="tei">TEI</option>
-                          <option value="titl">TITL</option>
-                          <option value="tflm">TFLM</option>
-                          <option value="tpl">TPL</option>
+                          <option value="RPL">RPL</option>
+                          <option value="TKJ">TKJ</option>
+                          <option value="DPIB">DPIB</option>
+                          <option value="DGM">DGM</option>
+                          <option value="TM">TM</option>
+                          <option value="TKRO">TKRO</option>
+                          <option value="TBSM">TBSM</option>
+                          <option value="TEI">TEI</option>
+                          <option value="TITL">TITL</option>
+                          <option value="TFLM">TFLM</option>
+                          <option value="TPL">TPL</option>
                         </select>
                     <label for="exampleInputEmail1">No Telepon</label>
                     <input type="number" class="form-control" name="telp" placeholder="Input No Telp Anggota">
@@ -55,10 +55,28 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-success">Submit</button>
-                  <a href="{{ route('anggota.index') }}" class="btn btn-success">Kembali</a>
+                  <button type="reset" class="btn btn-success">Reset</button>
+                  <a href="" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>
+            </div>
+
+             <div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Peringatan</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah Anda Yakin Akan Keluar Dari Form Create Data Anggota</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <a href="{{ route('anggota.index') }}" class="btn btn-primary">Yes</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
 <!-- jQuery -->

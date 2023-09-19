@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('content')
-
+<div class="content-wrapper">
 <div class="card card-info">
               <div class="card-header">
                 <h3 class="card-title">Form Detail Data Petugas</h3>
@@ -37,9 +37,27 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <a href="{{ route('petugas.index') }}" class="btn btn-info">Kembali</a>
+                  <a href="" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
+            </div>
+            </div>
+
+            <div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Peringatan</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah Anda Yakin Akan Keluar Dari Form Detail Data Petugas</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <a href="{{ route('petugas.index') }}" class="btn btn-primary">Yes</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
 <!-- jQuery -->

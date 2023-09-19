@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('content')
-
+<div class="content-wrapper">
 <div class="card card-warning">
               <div class="card-header">
                 <h3 class="card-title">Form Edit Data Petugas</h3>
@@ -21,29 +21,58 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputNama1">Nama</label>
-                    <input type="text" class="form-control" name="nama" value="{{ $petugass[0]->nama_petugas }}">
+                    <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ $petugass[0]->nama_petugas }}">
                   </div>
+                  @error('nama')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                   <div class="form-group">
                     <label for="exampleInputJabatan1">Jabatan</label>
-                    <input type="text" class="form-control" name="jabatan" value="{{ $petugass[0]->jabatan_petugas }}" >
+                    <input type="text" class="form-control @error('jabatan') is-invalid @enderror" name="jabatan" value="{{ $petugass[0]->jabatan_petugas }}" >
                   </div>
+                  @error('jabatan')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                   <div class="form-group">
                     <label for="exampleInputNoTelepon1">No Telepon</label>
-                    <input type="number" class="form-control" name="telp" value="{{ $petugass[0]->no_telp_petugas }}">
+                    <input type="number" class="form-control @error('telp') is-invalid @enderror" name="telp" value="{{ $petugass[0]->no_telp_petugas }}">
                   </div>
+                  @error('telp')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                   <div class="form-group">
                     <label for="exampleInputAlamat1">Alamat</label>
-                    <input type="text" class="form-control" name="alamat" value="{{ $petugass[0]->alamat_petugas }}">
+                    <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $petugass[0]->alamat_petugas }}">
                   </div>
+                  @error('alamat')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                 <!-- /.card-body -->
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-warning">Update</button>
-                  <a href="{{ route('petugas.index') }}" class="btn btn-warning">Kembali</a>
+                  <a href="" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>
+            </div>
 
+            <div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Peringatan</h5>
+                  </div>
+                  <div class="modal-body">
+                    <p>Apakah Anda Yakin Akan Keluar Dari Form Edit Data Petugas</p>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <a href="{{ route('petugas.index') }}" class="btn btn-primary">Yes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 <!-- jQuery -->
 <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->

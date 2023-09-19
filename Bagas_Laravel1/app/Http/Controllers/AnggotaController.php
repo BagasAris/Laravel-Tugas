@@ -36,7 +36,7 @@ class AnggotaController extends Controller
         'jk' => 'required',
         'jurusan' => 'required',
         'telp' => 'required|numeric|min:10',
-        'alamat' => 'required',
+        'alamat' => 'required|min:10',
     ]);
 
     $query = DB::table('anggotas')->insert([
@@ -83,7 +83,7 @@ class AnggotaController extends Controller
             'jk' => 'required',
             'jurusan' => 'required',
             'telp' => 'required|numeric|min:10',
-            'alamat' => 'required',
+            'alamat' => 'required|min:10',
         ]);
 
         $query = DB::table('anggotas')->where('id', $id)->update([

@@ -11,10 +11,7 @@ class MasterController extends Controller
 {
 
     public function content(){
-        $buku = Buku::all();
-        $anggota = Anggota::all();
-        $petugas = Petugas::all();
-        return view('content',compact(['buku','anggota','petugas']));
+        return view('content');
         //dd($buku);
     }
 
