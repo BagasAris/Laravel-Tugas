@@ -99,7 +99,7 @@
                   <form action="{{ route('anggota.destroy', $value->id) }}" method="POST">
                       @csrf
                       @method('DELETE')
-                      <button type="sumbit" class="btn btn-small btn-info">Yes</button>
+                      <button type="submit" class="btn btn-small btn-danger ">Yes</button>
                       </form>
                   </div>
                 </div>

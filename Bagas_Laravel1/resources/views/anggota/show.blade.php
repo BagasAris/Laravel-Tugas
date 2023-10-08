@@ -18,21 +18,20 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Kode Anggota</label>
-                    <input type="text" class="form-control" name="kode" value="{{ $anggotas[0]->kode_anggota }}" disabled>
+                    <input type="text" class="form-control" name="kode" value="{{ $anggota->kode_anggota }}" disabled>
                     <label for="exampleInputEmail1">Nama Anggota</label>
-                    <input type="text" class="form-control" name="nama" value="{{ $anggotas[0]->nama_anggota }}" disabled>
+                    <input type="text" class="form-control" name="nama" value="{{ $anggota->nama_anggota }}" disabled>
                         <label>Jenis Kelamin</label>
-                        <select type="text" name="jk" class="form-control" value="{{ $anggotas[0]->jk_anggota }}" disabled>
+                        <select type="text" name="jk" class="form-control" value="{{ $anggota->jk_anggota }}" disabled>
                           <option disabled selectdes>Jenis Kelamin</option>
                           <option value="L">Laki-Laki</option>
                           <option value="P">Perempuan</option>
                         </select>
                         <label>Jurusan</label>
-                        <select type="text" name="jurusan" class="form-control" value="{{ $anggotas[0]->jurusan_anggota }}" disabled>
+                        <select type="text" name="jurusan" class="form-control" value="{{ $anggota->jurusan_anggota }}" disabled>
                           <option disabled selectdes>Jurusan</option>
                           <option value="rpl">RPL</option>
                           <option value="tkj">TKJ</option>
@@ -47,9 +46,9 @@
                           <option value="tpl">TPL</option>
                         </select>
                     <label for="exampleInputEmail1">No Telepon</label>
-                    <input type="number" class="form-control" name="telp" value="{{ $anggotas[0]->no_telp_anggota }}" disabled>
+                    <input type="number" class="form-control" name="telp" value="{{ $anggota->no_telp_anggota }}" disabled>
                     <label for="exampleInputEmail1">Alamat Anggota</label>
-                    <input type="text" class="form-control" name="alamat" value="{{ $anggotas[0]->alamat_anggota }}" disabled>
+                    <input type="text" class="form-control" name="alamat" value="{{ $anggota->alamat_anggota }}" disabled>
                   </div>
                 <!-- /.card-body -->
 

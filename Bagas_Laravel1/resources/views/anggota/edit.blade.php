@@ -9,7 +9,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{ route('anggota.update', $anggotas[0]->id) }}" method="POST">
+              <form action="{{ route('anggota.update', $anggota->id) }}" method="POST">
                 @csrf
                 @method('PUT')
               <div class="card-body">
@@ -19,46 +19,58 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Kode Anggota</label>
-                    <input type="text" class="form-control"  name="kode" value="{{ $anggotas[0]->kode_anggota }}">
+                    <input type="text" class="form-control @error('kode') is-invalid @enderror"  name="kode" value="{{ $anggota->kode_anggota }}">
+                    @error('kode')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     <label for="exampleInputEmail1">Nama Anggota</label>
-                    <input type="text" class="form-control" name="nama" value="{{ $anggotas[0]->nama_anggota }}">
+                    <input type="text" class="form-control  @error('nama') is-invalid @enderror" name="nama" value="{{ $anggota->nama_anggota }}">
+                    @error('nama')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     <div class="form-group">
-                    <label for="jk_anggota">Jenis Kelamin</label>
-                      <select name="jk_anggota" id="jk_anggota" class="form-control @error('jk_anggota') is-invalid @enderror" value="{{ $anggotas[0]->jk_anggota }}">
-                      <option value="L" @if($anggotas[0]->jk_anggota == 'L') selected @endif>Laki-Laki</option>
-                      <option value="P" @if($anggotas[0]->jk_anggota == 'P') selected @endif>Perempuan</option>
+                    <label for="jk">Jenis Kelamin</label>
+                      <select name="jk" id="jk" class="form-control @error('jk') is-invalid @enderror" value="{{ $anggota->jk_anggota }}">
+                      <option value="L" @if($anggota->jk == 'L') selected @endif>Laki-Laki</option>
+                      <option value="P" @if($anggota->jk == 'P') selected @endif>Perempuan</option>
                       </select>
                     </div>
-                    @error('jk_anggota')
+                    @error('jk')
                       <div class="alert alert-danger">{{ $message }}</div>
-                   @enderror
+                    @enderror
                         <label>Jurusan</label>
-                        <select type="text" name="jurusan" class="form-control  @error('jurusan_anggota') is-invalid @enderror" value="{{ $anggotas[0]->jurusan_anggota }}">
+                        <select type="text" name="jurusan" class="form-control @error('jurusan') is-invalid @enderror" value="{{ $anggota->jurusan_anggota }}">
                           <option selectdes>Jurusan</option>
-                          <option value="RPL" @if($anggotas[0]->jurusan_anggota == 'RPL') selected @endif>RPL</option>
-                          <option value="TKJ"@if($anggotas[0]->jurusan_anggota == 'TKJ') selected @endif>TKJ</option>
-                          <option value="DPIB" @if($anggotas[0]->jurusan_anggota == 'DPIB') selected @endif>DPIB</option>
-                          <option value="DGM" @if($anggotas[0]->jurusan_anggota == 'DGM') selected @endif>DGM</option>
-                          <option value="TM" @if($anggotas[0]->jurusan_anggota == 'TM') selected @endif>TM</option>
-                          <option value="TKRO" @if($anggotas[0]->jurusan_anggota == 'TKRO') selected @endif>TKRO</option>
-                          <option value="TBSM" @if($anggotas[0]->jurusan_anggota == 'TBSM') selected @endif>TBSM</option>
-                          <option value="TEI" @if($anggotas[0]->jurusan_anggota == 'TEI') selected @endif>TEI</option>
-                          <option value="TITL" @if($anggotas[0]->jurusan_anggota == 'TITL') selected @endif>TITL</option>
-                          <option value="TFLM" @if($anggotas[0]->jurusan_anggota == 'TFLM') selected @endif>TFLM</option>
-                          <option value="TPL" @if($anggotas[0]->jurusan_anggota == 'TPL') selected @endif>TPL</option>
+                          <option value="RPL" @if($anggota->jurusan_anggota == 'RPL') selected @endif>RPL</option>
+                          <option value="TKJ"@if($anggota->jurusan_anggota == 'TKJ') selected @endif>TKJ</option>
+                          <option value="DPIB" @if($anggota->jurusan_anggota == 'DPIB') selected @endif>DPIB</option>
+                          <option value="DGM" @if($anggota->jurusan_anggota == 'DGM') selected @endif>DGM</option>
+                          <option value="TM" @if($anggota->jurusan_anggota == 'TM') selected @endif>TM</option>
+                          <option value="TKRO" @if($anggota->jurusan_anggota == 'TKRO') selected @endif>TKRO</option>
+                          <option value="TBSM" @if($anggota->jurusan_anggota == 'TBSM') selected @endif>TBSM</option>
+                          <option value="TEI" @if($anggota->jurusan_anggota == 'TEI') selected @endif>TEI</option>
+                          <option value="TITL" @if($anggota->jurusan_anggota == 'TITL') selected @endif>TITL</option>
+                          <option value="TFLM" @if($anggota->jurusan_anggota == 'TFLM') selected @endif>TFLM</option>
+                          <option value="TPL" @if($anggota->jurusan_anggota == 'TPL') selected @endif>TPL</option>
                         </select>
-                        @error('jurusan_anggota')
-                      <div class="alert alert-danger">{{ $message }}</div>
-                   @enderror
+                        @error('jurusan')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                     <label for="exampleInputEmail1">No Telepon</label>
-                    <input type="number" class="form-control" name="telp" value="{{ $anggotas[0]->no_telp_anggota }}">
+                    <input type="number" class="form-control @error('telp') is-invalid @enderror" name="telp" value="{{ $anggota->no_telp_anggota }}">
+                    @error('telp')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     <label for="exampleInputEmail1">Alamat Anggota</label>
-                    <input type="text" class="form-control" name="alamat" value="{{ $anggotas[0]->alamat_anggota }}">
+                    <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ $anggota->alamat_anggota }}">
+                    @error('alamat')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                   </div>
+</form>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
