@@ -137,11 +137,11 @@ public function update(Request $request, string $id)
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Anggota $anggota, string $id)
+    public function destroy(string $id)
     {
-        //
-        $anggota = Anggota::find($id);
+        $anggota = Anggota::where('id', $id)->firstOrFail();
         $anggota->delete();
         return redirect()->route('anggota.index');
     }
+    
 }

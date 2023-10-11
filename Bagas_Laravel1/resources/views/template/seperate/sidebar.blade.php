@@ -61,6 +61,15 @@
                   <p>Buku</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <form action="{{ route('auth.logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-light btn-md nav-link">
+                      Log Out &nbsp;
+                      <i class="fas fa-sign-out-alt"></i> <!-- Menggunakan ikon Logout yang benar -->
+                    </button>
+                </form>
+              </li>
             </ul>
       </nav>
       <!-- /.sidebar-menu -->
